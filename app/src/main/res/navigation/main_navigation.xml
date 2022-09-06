@@ -18,7 +18,7 @@
         android:id="@+id/fragmentDua"
         android:name="com.example.navigation.FragmentDua"
         android:label="fragment_dua"
-        tools:layout="@layout/fragment_dua" >
+        tools:layout="@layout/fragment_dua">
         <action
             android:id="@+id/action_fragmentDua_to_fragmentTiga"
             app:destination="@id/fragmentTiga" />
@@ -32,5 +32,8 @@
             android:name="name"
             app:argType="string"
             android:defaultValue="Namanya Kosong" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="contoh.com/nama/{name}" />
     </fragment>
 </navigation>

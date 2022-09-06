@@ -27,7 +27,7 @@ class FragmentDua : Fragment() {
 
         binding.tvNama.text = "Nama kamu: $aName"
 
-        binding.btnToFragmentTiga.setOnClickListener{ view
+        binding.btnToFragmentTiga.setOnClickListener{view
             if (binding.etName.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Kolom nama masih kosong", Toast.LENGTH_SHORT).show()
             } else{

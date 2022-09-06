@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.example.navigation.databinding.FragmentTigaBinding
 
 class FragmentTiga : Fragment() {
 
     private var _binding: FragmentTigaBinding? = null
     private val binding get() = _binding!!
+    private val safeArgs: FragmentTigaArgs by navArgs()
+    private var nama=""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +28,10 @@ class FragmentTiga : Fragment() {
 
         val aName = FragmentTigaArgs.fromBundle(arguments as Bundle).name
         binding.tvName.text = "Namanya: $aName"
+
+        nama=safeArgs.name
+        binding.tvName.text = nama
+
     }
 
     override fun onDestroy() {

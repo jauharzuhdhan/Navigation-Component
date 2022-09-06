@@ -21,10 +21,6 @@ package="com.example.navigation">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-<!--    <activity android:name=".NavigationActivity"-->
-<!--        android:exported="true">-->
-<!--        <nav-graph android:value="@navigation/main_navigation" />-->
-<!--    </activity>-->
 </application>
 
 </manifest>
