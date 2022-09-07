@@ -27,13 +27,13 @@
         android:id="@+id/fragmentTiga"
         android:name="com.example.navigation.FragmentTiga"
         android:label="fragment_tiga"
-        tools:layout="@layout/fragment_tiga" >
+        tools:layout="@layout/fragment_tiga">
         <argument
             android:name="name"
-            app:argType="string"
-            android:defaultValue="Namanya Kosong" />
+            android:defaultValue="Namanya Kosong"
+            app:argType="string" />
         <deepLink
             android:id="@+id/deepLink"
-            app:uri="contoh.com/nama/{name}" />
+            app:uri="ayhkashahsk.com/uname/{name}" />
     </fragment>
 </navigation>

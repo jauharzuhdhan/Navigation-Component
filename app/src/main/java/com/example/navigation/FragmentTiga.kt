@@ -9,11 +9,8 @@ import androidx.navigation.fragment.navArgs
 import com.example.navigation.databinding.FragmentTigaBinding
 
 class FragmentTiga : Fragment() {
-
     private var _binding: FragmentTigaBinding? = null
     private val binding get() = _binding!!
-    private val safeArgs: FragmentTigaArgs by navArgs()
-    private var nama=""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,12 +23,13 @@ class FragmentTiga : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val aName = FragmentTigaArgs.fromBundle(arguments as Bundle).name
+        val aName: String = if(FragmentTigaArgs.fromBundle(arguments as Bundle).name.isNullOrEmpty()){
+            FragmentTigaArgs.fromBundle(arguments as Bundle).name.toString()
+        } else {
+            val args : FragmentTigaArgs by navArgs()
+            args.name.toString()
+        }
         binding.tvName.text = "Namanya: $aName"
-
-        nama=safeArgs.name
-        binding.tvName.text = nama
-
     }
 
     override fun onDestroy() {
